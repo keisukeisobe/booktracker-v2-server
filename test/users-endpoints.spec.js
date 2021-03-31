@@ -154,7 +154,7 @@ describe('Users endpoints', function() {
             .then(row => {
               expect(row.book_id).to.eql(res.body.book_id);
               expect(row.user_id).to.eql(testUser.id);
-              expect(row.percent).to.eql(0);
+              expect(row.percent).to.eql('0');
               expect(row.maxpagecount).to.eql(res.body.maxpagecount);
               expect(row.reading_status).to.eql('in progress');
             })
