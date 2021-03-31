@@ -10,9 +10,8 @@
     "migrate": "postgrator --config postgrator-config.js",
     "migrate:test": "env NODE_ENV=test npm run migrate",
     "migrate:production": "env SSL=true npm run migrate",
-    "predeploy": "npm audit",
-    "deploy": "git push heroku main",
-    "postdeploy": "npm run migrate:production"
+    "predeploy": "npm audit && npm run migrate:production",
+    "deploy": "git push heroku main"
   },
   "keywords": [],
   "author": "",
