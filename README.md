@@ -1,26 +1,50 @@
-# Express Boilerplate!
+# BookTracker
 
-This is a boilerplate project used for starting new projects!
+## Link: https://booktracker-client.vercel.app/
 
-## Set up
+## Welcome to BookTracker
+BookTracker is an app that will allow you to track what books you're reading, your progress in you
+books, and rate the books you've read in a more granular fashion than other reading apps. 
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+BookTracker also provides users with a profile of their reading habits and proclivities, based on their 
+ratings of books in their library. 
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+## Features (for all users)
+ :white_check_mark: Keep track of all of the books you've started, finished, or DNF'd (did not finish)
 
-## Scripts
+ :white_check_mark: Track progress, rate books based on a granular set of features rather than a single star rating, and save your reviews
 
-Start the application `npm start`
+ :white_check_mark: Check your user profile for a snapshot of your readinga nd rating habits, based on your library
 
-Start nodemon for the application `npm run dev`
+## API Documentation: 
+```
+├── /auth/login
+│   └── POST    /           (log in)
+|
+├── /users
+│   └── GET     /lists      (get lists for user)
+|
+├── /users/:user_id
+│   └── GET     /           (gets user information)
+│   └── POST    /           (post new book to user's list)
+|
+├── /users/:user_id/books/:book_id
+│   └── GET     /           (get book from user list)
+│   └── PATCH   /           (update book information for user)
+```
 
-Run the tests `npm test`
+Base URL: https://gentle-fortress-47962.herokuapp.com/api/
 
-## Deploying
+## Tech Specs: 
+**Front-end:**
+- React
+- HTML5
+- CSS
+- Vercel (formerly known as Zeit)
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+**Back-end**
+- Node
+- Express
+- PostgreSQL DB hosted on Heroku
+- JWT 
+
